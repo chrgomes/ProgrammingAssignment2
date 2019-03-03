@@ -74,3 +74,18 @@ cacheSolve <- function(cacheable.mat, ...) {
   inv.mat #Return the Inverse.
   
 }
+
+## > source("cachematrix.R")
+## > testmatrix <- matrix(c(3,6,3,1,7,5,8,2,0), nrow=3, ncol=3)
+## > mcm <- makeCacheMatrix(testmatrix)
+## > cacheSolve(mcm)
+## [,1]       [,2]    [,3]
+## [1,] -0.2083333  0.8333333 -1.1250
+## [2,]  0.1250000 -0.5000000  0.8750
+## [3,]  0.1875000 -0.2500000  0.3125
+## > cacheSolve(mcm)
+## Getting cached inverse matrix
+## [,1]       [,2]    [,3]
+## [1,] -0.2083333  0.8333333 -1.1250
+## [2,]  0.1250000 -0.5000000  0.8750
+## [3,]  0.1875000 -0.2500000  0.3125
